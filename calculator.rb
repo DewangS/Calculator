@@ -5,14 +5,14 @@
 #require 'pry'
 
 def disp_msg(msg_in)
-puts "=>  #{msg_in}"
+    puts "=>  #{msg_in}"
 end
 
 begin 
 
 #declare variables
 flag = false
-ans = 'n'
+answer = 'n'
 
 #loop until user enters a valid numeric value for the first parameter
 begin
@@ -49,9 +49,9 @@ flag = false
 #loop until user selects a valid operation
 begin
   disp_msg("Please select the operation 1) Add 2) Subtract 3) Multiply 4) Devide ")
-  op = gets.chomp
+  operator = gets.chomp
 
-  case op
+  case operator
     when '1'
       result = num1.to_f + num2.to_f
       flag = true
@@ -72,6 +72,6 @@ end while !flag
 disp_msg("=> Result is #{result}")
 
 disp_msg("Do you want to exit the calculator?(y/n)")
-ans = gets.chomp
+answer = gets.chomp
 
-end while ans != 'y'
+end while answer != 'y'
